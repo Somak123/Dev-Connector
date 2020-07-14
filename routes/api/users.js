@@ -23,7 +23,7 @@ router.post(
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.sendStatus(400).json({ errors: errors.array() });
+      return res.status(400).json({ errors: errors.array() });
     }
     const { name, email, password } = req.body;
     try {
@@ -31,7 +31,7 @@ router.post(
       let user = await User.findOne({ email });
       if (user) {
         return res
-          .sendStatus(400)
+          .status(400)
           .json({ errors: [{ msg: "User already exists!" }] });
       }
       //get gravatar
@@ -68,7 +68,7 @@ router.post(
       );
     } catch (err) {
       console.log(err.message);
-      res.sendStatus(500).send("server error");
+      res.status(500).send("server error");
     }
   }
 );
