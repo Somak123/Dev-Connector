@@ -1,5 +1,5 @@
 {
-  "mongoURI": "mongodb+srv://somak123:somak123@devconnector.vycfl.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://username:password@devconnector.vycfl.mongodb.net/<dbname>?retryWrites=true&w=majority",
   "jwtSecret": "mysecrettoken",
   "githubClientId": "9443482c44efd76e44a7",
   "githubSecret": "f515208afed294ac4f27d2b774b0eab9cd78c345"
